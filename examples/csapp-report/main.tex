@@ -1,0 +1,59 @@
+\documentclass[UTF8,fontset=fandol,a4paper,12pt]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,booktabs,graphicx,listings}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{refs.bib}
+\usepackage[hidelinks]{hyperref}
+\title{系统实验 01：观察数组的存储布局}
+\author{姓名：\underline{\hspace{3cm}}}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+用 C 程序输出数组元素的地址和元素大小，用相邻地址的差检验数组布局。
+表中的数值是演算示例，提交时请替换为自己的测量。
+\end{abstract}
+\section{问题与预测}
+记元素大小为 $s$ 字节，首元素的字节地址为 $A_0$。
+连续数组中，下标为 $i$ 的元素地址应满足式~\eqref{eq:address}。
+\begin{equation}\label{eq:address}
+  A_i=A_0+i\,s .
+\end{equation}
+有关机器级数据表示的背景参见文献~\cite{csapp3}。
+\section{方法}
+记录操作系统、编译器版本与编译参数，再运行以下程序。
+\begin{lstlisting}[language=C,basicstyle=\ttfamily\small,frame=single]
+#include <stdio.h>
+int main(void) {
+    int a[3] = {10, 20, 30};
+    printf("size = %zu bytes\n", sizeof a[0]);
+    for (size_t i = 0; i < 3; ++i)
+        printf("%zu: %p\n", i, (void *)&a[i]);
+    return 0;
+}
+\end{lstlisting}
+\section{结果}
+图~\ref{fig:array} 表示元素顺序，表~\ref{tab:offset} 给出示例偏移。
+\begin{figure}[htbp]
+  \centering
+  \fbox{\strut $a[0]$}\fbox{\strut $a[1]$}\fbox{\strut $a[2]$}
+  \caption{数组元素的排列示意}\label{fig:array}
+\end{figure}
+\begin{table}[htbp]
+  \centering
+  \caption{当元素大小为 4 字节时的示例偏移}\label{tab:offset}
+  \begin{tabular}{rrr}
+    \toprule
+    下标 & 值 & 相对首地址的偏移（字节）\\
+    \midrule
+    0 & 10 & 0\\
+    1 & 20 & 4\\
+    2 & 30 & 8\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\section{讨论}
+请填入实际测得的元素大小、三条地址和两次相邻地址差。
+比较测量与预测，说明换成 \texttt{double} 后应如何修改预测。
+\printbibliography[title={参考文献}]
+\end{document}

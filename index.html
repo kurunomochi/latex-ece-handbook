@@ -1,0 +1,146 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LaTeX 实验写作手册 · ECE 学习笔记</title><style>
+:root{--ink:#192d2b;--green:#12634e;--line:#d6ded7;--paper:#f7f8f2}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.82 "Segoe UI","Microsoft YaHei",sans-serif}.mast{border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px max(5vw,24px);font-size:13px;letter-spacing:1px}.mark{display:inline-grid;place-items:center;background:var(--green);color:white;width:30px;height:30px;margin-right:12px;font:italic bold 22px Georgia}.mast button{background:transparent;border:1px solid var(--line);border-radius:20px;padding:5px 16px;color:var(--ink)}button,summary{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #bd7637}.hero{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.45fr 1fr;align-items:center;gap:5%;padding:54px 32px 44px}.kicker,nav header,.eyebrow{font:600 12px/1.6 Consolas,"Microsoft YaHei",monospace;letter-spacing:1.4px;color:var(--green)}.hero h1{font:600 clamp(38px,4.5vw,68px)/1.16 Georgia,"Songti SC",SimSun,serif;letter-spacing:-2px;margin:15px 0}.hero p{max-width:600px;margin:14px 0}.cta{display:inline-block;background:var(--green);color:white;padding:7px 18px;border-radius:5px;text-decoration:none;margin:5px 0}.card{border:1px solid #a9b9ad;background:#fffef7;border-radius:4px;padding:24px 30px;box-shadow:6px 7px 0 #dce5db;transform:rotate(1deg)}.card h3{font:600 23px Georgia,SimSun,serif;margin:16px 0}.card .eq{font:italic 30px Georgia;text-align:center;margin:20px}.card footer{border-top:1px solid var(--line);padding-top:10px;font:12px Consolas,monospace;color:#596860}.layout{border-top:1px solid var(--line);max-width:1200px;margin:auto;display:grid;grid-template-columns:206px minmax(0,1fr);gap:45px;padding:0 32px 64px}nav{position:sticky;top:18px;align-self:start;max-height:95vh;overflow:auto;padding:30px 0}nav a{display:block;color:var(--ink);font-size:14px;padding:6px 4px;text-decoration:none;border-left:2px solid transparent}nav a:hover,nav a.active{border-color:var(--green);background:#e5ece2}nav i{font:12px Consolas;color:#5d7467;padding:0 8px 0 5px}nav header{margin-bottom:12px}main{min-width:0}section{padding:32px 0 26px;border-bottom:1px solid var(--line)}h2{font:600 clamp(25px,3vw,35px)/1.3 Georgia,SimSun,serif;margin:9px 0 17px}em{font-style:normal;color:#969d77;margin:0 5px}p,ol{margin:12px 0}li{margin:5px 0}p a{color:var(--green);text-underline-offset:3px}code{font:0.93em/1.6 Consolas,"Microsoft YaHei",monospace;overflow-wrap:anywhere}p code,li code,aside code{background:#e8ede4;border-radius:3px;padding:1px 4px}.snippet{background:#172d29;color:#e0efe2;border-radius:7px;margin:18px 0;overflow:hidden}.bar{background:#233f38;color:#c9e4d4;display:flex;align-items:center;gap:8px;justify-content:space-between;flex-wrap:wrap;padding:8px 14px;font:12px/1.5 Consolas,"Microsoft YaHei",monospace}.bar button{background:none;border:1px solid #648277;border-radius:4px;color:#eff9ec;padding:3px 9px;margin-left:6px}.bar button:hover{background:#43655a}pre{overflow:auto;padding:15px 18px;margin:0;tab-size:3}pre code{font-size:14px;line-height:1.65}.try,aside,.paper{padding:16px 20px;background:#e9efe3;border-left:3px solid #46775b;margin:16px 0}.try b{color:var(--green);margin-right:6px}summary{color:var(--green);font-size:14px}.paper{background:#fffcf3;border-color:#bb9253}.paper small{color:#685735}math{font-size:25px}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:top}thead{background:#e8eee4}td:first-child{width:34%;font-weight:600}.end{padding:24px;font-size:13px;text-align:center;color:#56665c}@media(max-width:800px){.hero{padding:30px 20px;grid-template-columns:1fr}.card{display:none}.layout{display:block;padding:0 20px}nav{position:static;max-height:none;padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}nav header{grid-column:1/-1}nav a{font-size:13px}section{padding:26px 0}.mast{padding:10px 20px}}@media print{.mast,nav,.cta,.bar button,.end,.card{display:none}.hero,.layout{display:block;padding:0}body{font-size:10pt;background:white}.snippet,.bar,pre{background:white;color:black}pre,pre code{white-space:pre-wrap;overflow-wrap:anywhere}.hero h1{font-size:28pt}section{break-before:page}.try,.paper{break-inside:avoid}summary{display:none}a{color:black}}</style></head><body><div class="mast"><span><span class="mark">λ</span>ECE 学习笔记</span><button id="print">打印手册</button></div><header class="hero"><div><div class="eyebrow">FIELD NOTES　/　工程写作　01</div><h1>LaTeX 实验写作手册</h1><p>从一张中文 PDF 开始，写清电路公式、程序和测量结果，最后交付一份可以复现的 CSAPP 实验报告。</p><a class="cta" href="#s0">开始第一课 ↓</a></div><div class="card"><span class="eyebrow">SPECIMEN　/　排版样张</span><h3>系统实验 01　数组的存储布局</h3><div class="eq">A<sub>i</sub> = A<sub>0</sub> + i · s</div><footer>i　元素下标　　 s　单个元素的字节数</footer></div></header><div class="layout"><nav aria-label="课程目录"><header>CONTENTS　/　目录</header><a href="#s0"><i>01</i>先得到第一张 PDF</a><a href="#s1"><i>02</i>在 Windows 本地编译</a><a href="#s2"><i>03</i>写出有层次的正文</a><a href="#s3"><i>04</i>把 ECE 公式写清楚</a><a href="#s4"><i>05</i>放入图表，引用结果</a><a href="#s5"><i>06</i>记录代码与运行条件</a><a href="#s6"><i>07</i>建立自己的参考文献库</a><a href="#s7"><i>08</i>交付一份 CSAPP 实验报告</a><a href="#s8"><i>09</i>读懂报错，自己排查</a></nav><main><section id="s0"><div class="kicker">LESSON 01 <em>/</em> 上手 · 15 分钟</div><h2>先得到第一张 PDF</h2><p>LaTeX 把文本文件编译成 PDF。你在源文件里标记“这是标题、这是公式”，编译器负责编号和排版。对准备考研的 ECE 学生，最划算的用途是写带推导的笔记、整理实验数据、复用报告模板。备考做题仍以你能快速推导和订正为准；老师指定提交 Word 时遵循课程要求。</p><ol><li>在 Overleaf 创建空白项目（Blank Project），打开 <code>main.tex</code>，将其内容全部换成下面的示例。</li><li>在项目设置中找到 Compiler，选 <b>XeLaTeX</b>，确认主文档为 <code>main.tex</code>，点击 Recompile。</li><li>右侧 PDF 应出现标题、姓名、日期、实验目的和一行公式。把作者换成自己，再编译，最后下载 PDF。</li></ol><div class="snippet"><div class="bar"><span>完整文件 · 可单独编译</span><span><button class="copy">复制</button><button data-file="main.tex">下载 main.tex</button></span></div><pre><code>\documentclass[UTF8,fontset=fandol,a4paper,12pt]{ctexart}
+\usepackage{amsmath}
+\title{我的第一份实验记录}
+\author{你的名字}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{实验目的}
+观察两个单位向量的夹角如何影响点积。
+
+当夹角为 $60^\circ$ 时，点积为 $\cos 60^\circ=0.5$。
+\end{document}</code></pre></div><p>第一行选择中文短文文档类；<code>fontset=fandol</code> 明确使用 TeX 发行版可提供的中文字体。文档类到正文开始之间叫<b>导言区</b>，负责加载功能和设置。标题命令保存信息，<code>\maketitle</code> 才把它放上纸面。</p><aside>本 HTML 可离线阅读，网页里的按钮用于复制或下载源码。得到真正的 PDF，需要在线编译器或已安装的本地 TeX 环境。</aside><p><a href="https://www.overleaf.com/project">Overleaf 项目入口 ↗</a> · <a href="https://docs.overleaf.com/getting-started/recompiling-your-project/selecting-a-compiler">选择编译器 ↗</a> · <a href="https://ctan.org/pkg/ctex">中文排版 ctex ↗</a></p></section><section id="s1"><div class="kicker">LESSON 02 <em>/</em> 环境 · 可选</div><h2>在 Windows 本地编译</h2><p>想用 Git 留存实验报告、断网写作时，再装 TeX Live。编辑器负责写文件，XeLaTeX 负责排版，latexmk 会按需反复运行编译器和文献工具。</p><ol><li>从 LaTeX 官方入口进入 TeX Live 的 Windows 安装说明。完整发行版省去逐个寻找中文字体和宏包的工作。安装后重开 PowerShell。</li><li>新建文件夹，把上一节下载的 <code>main.tex</code> 放进去，用 UTF-8 保存。在这个文件夹里打开终端。</li><li>依次执行下面的命令。若前两条报告找不到命令，先检查安装是否完成、终端是否重开，再检查安装程序显示的 bin 目录是否在 PATH。</li></ol><div class="snippet"><div class="bar"><span>PowerShell · 依次运行</span><span><button class="copy">复制</button></span></div><pre><code>xelatex --version
+latexmk -v
+latexmk -xelatex -interaction=nonstopmode -file-line-error main.tex</code></pre></div><p>打开同目录的 <code>main.pdf</code>。源文件和用到的图片、文献库要保留；<code>.aux</code> 存引用信息，<code>.log</code> 记编译过程。Git 中优先提交源文件、图片和文献库。只有模板明确要求时才更换编译引擎。</p><p><a href="https://www.latex-project.org/get/">官方安装入口 ↗</a> · <a href="https://tug.org/texlive/windows.html">TeX Live for Windows ↗</a> · <a href="https://ctan.org/pkg/latexmk">latexmk ↗</a></p></section><section id="s2"><div class="kicker">LESSON 03 <em>/</em> 基础 · 命令与环境</div><h2>写出有层次的正文</h2><p>命令以反斜杠开头。花括号装必需参数，方括号通常装可选参数。环境用同名的 begin 和 end 包住内容。下面的片段放进第一节示例的正文区，保留原有文档外壳。</p><div class="snippet"><div class="bar"><span>正文片段</span><span><button class="copy">复制</button></span></div><pre><code>\section{实验方法}
+\subsection{记录条件}
+固定输入大小，记录编译器版本。这里是\textbf{控制变量}。
+
+空一行开始下一段。源文件里普通的单次换行通常不会另起一段。
+\begin{enumerate}
+  \item 预测输出。
+  \item 编译运行，并把结果记入表格。
+\end{enumerate}
+成功率为 95\%，文件名为 \texttt{mini\_kv.c}。
+% 这一行是给自己的注释。</code></pre></div><p><code>itemize</code> 给出无序列表。把 <code>\tableofcontents</code> 放在标题之后可生成目录，重复编译以更新页码。星号版 <code>\section*{致谢}</code> 生成无编号标题，默认不会进入目录。正文中要打印 <code># $ % &amp; _ { }</code>，在前面加反斜杠；短文件名和命令也可写成 <code>\verb|mini_kv.c|</code>。</p><div class="try"><b>动手练习</b> 把两步扩为三步，添加“分析差异”；让文件名中的下划线正确显示。<details><summary>检查答案</summary><p>新增一个 <code>\item 分析差异。</code>；文件名用 <code>\texttt{mini\_kv.c}</code>。没有数学含义的下划线别用数学模式绕过去。</p></details></div></section><section id="s3"><div class="kicker">LESSON 04 <em>/</em> 数学 · 推导与符号</div><h2>把 ECE 公式写清楚</h2><p>短变量放在行内，如 <code>$R$</code>；单独展示且无需编号的公式用 <code>\[ ... \]</code>。需要编号时用 <code>equation</code>，多行推导用 <code>align</code>。本章使用第一节已加载的 <code>amsmath</code>。</p><div class="snippet"><div class="bar"><span>例一 · 一阶 RC 低通滤波器</span><span><button class="copy">复制</button></span></div><pre><code>令电阻为 $R$，电容为 $C$，角频率为 $\omega$。
+\begin{align}
+  H(j\omega) &amp;= \frac{1}{1+j\omega RC}, \\
+  |H(j\omega)| &amp;= \frac{1}{\sqrt{1+(\omega RC)^2}} .
+\end{align}
+当 $\omega=1/(RC)$ 时，幅值为 $1/\sqrt{2}$。</code></pre></div><div class="paper"><small>第二行的排版示意</small><math display="block" aria-label="幅频响应"><mrow><mo>|</mo><mi>H</mi><mo>(</mo><mi>j</mi><mi>ω</mi><mo>)</mo><mo>|</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo>(</mo><mi>ω</mi><mi>R</mi><mi>C</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mfrac></mrow></math></div><p><code>&amp;</code> 标出各行对齐的位置，两个反斜杠结束一行。下标用 <code>_</code>，上标用 <code>^</code>，多个字符要用花括号括住。<code>\sin</code>、<code>\log</code> 会把函数名排成正体。</p><div class="snippet"><div class="bar"><span>例二 · 离散信号、分段函数与矩阵</span><span><button class="copy">复制</button></span></div><pre><code>\[
+  X[k]=\sum_{n=0}^{N-1} x[n]\,e^{-j2\pi kn/N},
+  \qquad
+  u[n]=\begin{cases}1,&amp; n\ge 0,\\0,&amp; n&lt;0.\end{cases}
+\]
+\[
+  \mathbf{A}=\begin{bmatrix}1 &amp; 2\\3 &amp; 4\end{bmatrix},
+  \qquad E=\int_{-\infty}^{\infty}|x(t)|^2\,dt .
+\]</code></pre></div><div class="try"><b>动手练习</b> 写出截止频率 f 下标 c 等于 1 除以 2πRC。再为它加上编号。<details><summary>检查答案</summary><p><code>\begin{equation} f_c=\frac{1}{2\pi RC} \end{equation}</code>。频率单位为 Hz；前一个例子中的角频率单位为 rad/s。</p></details></div></section><section id="s4"><div class="kicker">LESSON 05 <em>/</em> 报告 · 图表与编号</div><h2>放入图表，引用结果</h2><p>表格的行和列由 <code>tabular</code> 生成，外层 <code>table</code> 提供题注、编号和浮动位置。<code>l</code>、<code>c</code>、<code>r</code> 分别让列左对齐、居中和右对齐。给数值列标明单位。</p><div class="snippet"><div class="bar"><span>导言区先加 · booktabs 与 graphicx</span><span><button class="copy">复制</button></span></div><pre><code>\usepackage{booktabs,graphicx}</code></pre></div><div class="snippet"><div class="bar"><span>正文 · 表格</span><span><button class="copy">复制</button></span></div><pre><code>见表~\ref{tab:sample}。
+\begin{table}[htbp]
+  \centering
+  \caption{采样间隔的演算示例}\label{tab:sample}
+  \begin{tabular}{rr}
+    \toprule
+    采样率（Hz） &amp; 间隔（ms）\\
+    \midrule
+    1000 &amp; 1.0\\
+    2000 &amp; 0.5\\
+    \bottomrule
+  \end{tabular}
+\end{table}</code></pre></div><div class="snippet"><div class="bar"><span>正文 · 先把自己的波形截图保存为 figures/wave.png</span><span><button class="copy">复制</button></span></div><pre><code>\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{figures/wave.png}
+  \caption{示波器测得的输出波形}\label{fig:wave}
+\end{figure}
+图~\ref{fig:wave} 给出了输出波形。</code></pre></div><p>把图片放到项目的 <code>figures</code> 文件夹再编译；线上项目也要上传该文件。<code>htbp</code> 允许编译器考虑此处、页顶、页底和浮动页。把 <code>\label</code> 放到 <code>\caption</code> 后面才能取得当前图表编号。正文用 <code>\ref</code> 引用图表，用 <code>\eqref</code> 引用带括号的公式编号。</p><div class="try"><b>动手练习</b> 在原来的表前插入另一张带标题的表。旧的“见表 1”该怎么改？<details><summary>检查答案</summary><p>正文保留 <code>\ref{tab:sample}</code> 即可，再编译到编号稳定。新表使用不同的标签名。</p></details></div></section><section id="s5"><div class="kicker">LESSON 06 <em>/</em> 系统 · 实验可复现</div><h2>记录代码与运行条件</h2><p>终端输出可放进 <code>verbatim</code> 环境原样展示；C 源码用 <code>listings</code> 宏包。代码里的百分号和下划线保留原样。下面的示例用 C99 或更新标准编译，输出本机的字节数。</p><div class="snippet"><div class="bar"><span>导言区</span><span><button class="copy">复制</button></span></div><pre><code>\usepackage{listings}</code></pre></div><div class="snippet"><div class="bar"><span>正文 · 带行号的程序</span><span><button class="copy">复制</button></span></div><pre><code>\begin{lstlisting}[language=C,numbers=left,
+  basicstyle=\small\ttfamily,breaklines=true,frame=single]
+#include &lt;stdio.h&gt;
+int main(void) {
+    printf("%zu\n", sizeof(int));
+    return 0;
+}
+\end{lstlisting}</code></pre></div><p>已有 <code>probe.c</code> 文件时，可用 <code>\lstinputlisting[language=C]{probe.c}</code> 直接排入文件内容。报告中记录编译器版本、命令、输入和实际观察值；讨论写出哪个现象支持或反驳了预测。较长的原始日志可留作附件。</p></section><section id="s6"><div class="kicker">LESSON 07 <em>/</em> 研究 · 文献与工程组织</div><h2>建立自己的参考文献库</h2><p>同目录新建 <code>refs.bib</code>。每条记录开头的 <code>csapp3</code> 是引用键，作者之间用英文 <code>and</code> 分隔。书用 <code>@book</code>；期刊论文常用 <code>@article</code>，核对作者、期刊、年份与 DOI 后再加入。</p><div class="snippet"><div class="bar"><span>文献库 · 与下一节共用</span><span><button class="copy">复制</button><button data-file="refs.bib">下载 refs.bib</button></span></div><pre><code>@book{csapp3,
+  author    = {Randal E. Bryant and David R. O'Hallaron},
+  title     = {Computer Systems: A Programmer's Perspective},
+  edition   = {3},
+  publisher = {Pearson},
+  year      = {2016}
+}</code></pre></div><div class="snippet"><div class="bar"><span>导言区</span><span><button class="copy">复制</button></span></div><pre><code>\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{refs.bib}</code></pre></div><div class="snippet"><div class="bar"><span>正文中引用；在正文末尾输出文献表</span><span><button class="copy">复制</button></span></div><pre><code>机器级程序的背景可参见文献~\cite{csapp3}。
+\printbibliography[title={参考文献}]</code></pre></div><p>用 <code>latexmk -xelatex main.tex</code> 可自动安排所需轮次。若想看清流程，在项目目录依次执行下列命令。Biber 的参数是主文档名，不带扩展名。第一轮产生引用请求，Biber 整理书目，后两轮写入并稳定编号。</p><div class="snippet"><div class="bar"><span>PowerShell · 手动编译顺序</span><span><button class="copy">复制</button></span></div><pre><code>xelatex main.tex
+biber main
+xelatex main.tex
+xelatex main.tex</code></pre></div><p>报告变长时可将章节存成 <code>sections/method.tex</code>，从主文件用 <code>\input{sections/method}</code> 插入；章节文件只写正文，统一编译主文件。学校模板若自带文献配置，按它的示例添加条目，避免重复加载宏包。</p><p><a href="https://ctan.org/pkg/biblatex">biblatex 文档 ↗</a></p></section><section id="s7"><div class="kicker">LESSON 08 <em>/</em> 综合 · 可下载的完整工程</div><h2>交付一份 CSAPP 实验报告</h2><p>这个工程只需要两个文件。下载本节的 <code>main.tex</code> 和 <code>refs.bib</code>，放在同一个新目录；Overleaf 用户上传到同一个空白项目。在 XeLaTeX 下编译。示意图用原生排版生成，无需额外图片。</p><div class="snippet"><div class="bar"><span>完整报告 · 系统实验 01</span><span><button class="copy">复制</button><button data-file="main.tex">下载 main.tex</button></span></div><pre><code>\documentclass[UTF8,fontset=fandol,a4paper,12pt]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,booktabs,graphicx,listings}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{refs.bib}
+\usepackage[hidelinks]{hyperref}
+\title{系统实验 01：观察数组的存储布局}
+\author{姓名：\underline{\hspace{3cm}}}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+用 C 程序输出数组元素的地址和元素大小，用相邻地址的差检验数组布局。
+表中的数值是演算示例，提交时请替换为自己的测量。
+\end{abstract}
+\section{问题与预测}
+记元素大小为 $s$ 字节，首元素的字节地址为 $A_0$。
+连续数组中，下标为 $i$ 的元素地址应满足式~\eqref{eq:address}。
+\begin{equation}\label{eq:address}
+  A_i=A_0+i\,s .
+\end{equation}
+有关机器级数据表示的背景参见文献~\cite{csapp3}。
+\section{方法}
+记录操作系统、编译器版本与编译参数，再运行以下程序。
+\begin{lstlisting}[language=C,basicstyle=\ttfamily\small,frame=single]
+#include &lt;stdio.h&gt;
+int main(void) {
+    int a[3] = {10, 20, 30};
+    printf("size = %zu bytes\n", sizeof a[0]);
+    for (size_t i = 0; i &lt; 3; ++i)
+        printf("%zu: %p\n", i, (void *)&amp;a[i]);
+    return 0;
+}
+\end{lstlisting}
+\section{结果}
+图~\ref{fig:array} 表示元素顺序，表~\ref{tab:offset} 给出示例偏移。
+\begin{figure}[htbp]
+  \centering
+  \fbox{\strut $a[0]$}\fbox{\strut $a[1]$}\fbox{\strut $a[2]$}
+  \caption{数组元素的排列示意}\label{fig:array}
+\end{figure}
+\begin{table}[htbp]
+  \centering
+  \caption{当元素大小为 4 字节时的示例偏移}\label{tab:offset}
+  \begin{tabular}{rrr}
+    \toprule
+    下标 &amp; 值 &amp; 相对首地址的偏移（字节）\\
+    \midrule
+    0 &amp; 10 &amp; 0\\
+    1 &amp; 20 &amp; 4\\
+    2 &amp; 30 &amp; 8\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\section{讨论}
+请填入实际测得的元素大小、三条地址和两次相邻地址差。
+比较测量与预测，说明换成 \texttt{double} 后应如何修改预测。
+\printbibliography[title={参考文献}]
+\end{document}</code></pre></div><div class="snippet"><div class="bar"><span>工程的第二个文件</span><span><button class="copy">复制</button><button data-file="refs.bib">下载 refs.bib</button></span></div><pre><code>@book{csapp3,
+  author    = {Randal E. Bryant and David R. O'Hallaron},
+  title     = {Computer Systems: A Programmer's Perspective},
+  edition   = {3},
+  publisher = {Pearson},
+  year      = {2016}
+}</code></pre></div><aside><b>交付检查</b>　换成自己的姓名和实际测量，核对图、表、公式、文献的编号。最后把 PDF 发给同学，看对方能否仅凭“方法”一节复现实验。</aside><div class="try"><b>动手练习</b> 把数组元素改为 double。先预测相邻地址的差值，再运行并更新报告。<details><summary>检查答案</summary><p>记下本机 <code>sizeof a[0]</code> 的实际输出；相邻元素字节地址的差应等于该值。改类型时仍可用 <code>%p</code> 打印转为 <code>void *</code> 的地址。首地址可能随运行变化，比较偏移即可。</p></details></div></section><section id="s8"><div class="kicker">LESSON 09 <em>/</em> 速查 · 从第一条错误开始</div><h2>读懂报错，自己排查</h2><p>先看日志中<b>第一条错误</b>及对应行号，同时检查上一行。一次只改一处。卡住时复制第一节能工作的最小文件，再逐段添回出错的内容。</p><div class="scroll"><table><thead><tr><th>看到的现象</th><th>先做的检查</th></tr></thead><tbody><tr><td>Undefined control sequence</td><td>查报错行里反斜杠后的命令是否拼错。若是 top­rule 或 eqref，再核对是否加载 booktabs 或 amsmath。</td></tr><tr><td>Missing $ inserted</td><td>先看正文有没有裸露的下划线，或数学公式的美元符号是否成对。</td></tr><tr><td>Runaway argument / File ended while scanning…</td><td>向前查最近改动的花括号，尤其是标题、题注或分式的参数。</td></tr><tr><td>中文字体找不到或中文缺字</td><td>确认编译器为 XeLaTeX、文件为 UTF-8，使用本教程的 ctexart 与 Fandol 字体配置；本地可用发行版管理器补装 ctex 和 fandol。</td></tr><tr><td>File … not found</td><td>核对图片路径、扩展名、大小写；确认文件已上传，或者位于主文件所在项目中。</td></tr><tr><td>图表引用显示 ??</td><td>核对标签拼写、唯一性及位置，重复编译。仍有问号时检查目标环境是否实际产生了编号。</td></tr><tr><td>文献表为空或显示引用键</td><td>检查 refs.bib 文件名、引用键、逗号与花括号，运行 biber main，查看 .blg 日志，再运行 XeLaTeX 两遍。</td></tr><tr><td>Overfull hbox</td><td>这是行太宽的警告。定位对应 PDF 行，检查长文件名、过宽代码或表格；给代码启用 breaklines，或缩短过长文本。</td></tr></tbody></table></div><p>以后写论文，先取学校或会议提供的模板，用原示例编译成功后再逐段替换。现在学到能独立完成第 08 节，就可以回到 CSAPP。下一份实验报告直接复用这个工程。</p></section></main></div><footer class="end">ECE 学习笔记　·　LaTeX 实验写作手册　/　完</footer><script>
+document.querySelectorAll('.snippet button').forEach(btn=>btn.addEventListener('click',async()=>{
+ const str=btn.closest('.snippet').querySelector('pre code').textContent;
+ if(btn.dataset.file){const url=URL.createObjectURL(new Blob([str+'\n'],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=btn.dataset.file;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);return}
+ try{await navigator.clipboard.writeText(str);btn.textContent='已复制'}catch{const range=document.createRange();range.selectNodeContents(btn.closest('.snippet').querySelector('code'));getSelection().removeAllRanges();getSelection().addRange(range);btn.textContent='已选中，请复制'}setTimeout(()=>btn.textContent='复制',2500)}));
+const links=[...document.querySelectorAll('nav a')];new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id))},{rootMargin:'0px 0px -65% 0px'}).observe(document.querySelector('section'));
+const track=()=>{let ix=0;document.querySelectorAll('section').forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.35)ix=i});links.forEach((a,i)=>a.classList.toggle('active',i===ix))};window.addEventListener('scroll',track,{passive:true});track();
+document.getElementById('print').onclick=()=>{const ds=[...document.querySelectorAll('details:not([open])')];ds.forEach(d=>d.open=true);window.addEventListener('afterprint',()=>ds.forEach(d=>d.open=false),{once:true});print()};
+</script></body></html>
